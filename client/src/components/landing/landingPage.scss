@@ -1,0 +1,28 @@
+#landingPageContainer {
+  margin: 0 2rem;
+  #landingHeader {
+    text-align: center;
+    h1 {
+      font-size: 6rem;
+      margin-bottom: 0;
+    }
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 0;
+      line-height: 1;
+    }
+  }
+  #landingMenu {
+    // margin: 4rem 30rem;
+    margin-top: 4rem;
+  }
+  .ant-list-item {
+    cursor: pointer;
+    color: black;
+  }
+  .ant-list-item-meta-description {
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+}
