@@ -1,4 +1,4 @@
-const models = require("../models");
+const Question = require("../model/Question");
 
 
 //var merchant = merchantService.addMerchant(req);

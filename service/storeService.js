@@ -1,10 +1,10 @@
-const models = require("../models");
+const models = require("../model/Store");
 
 
 //var merchant = merchantService.addMerchant(req);
 
 const storeService = {
-    addUser: (req) => {
+    addStore: (req) => {
         return models.store.create(req.body)
             .then((store) => {
                 return store.dataValues
