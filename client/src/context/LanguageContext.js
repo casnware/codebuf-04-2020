@@ -19,4 +19,4 @@ const LanguageContextSetter = {
 }
 
 
-export const LanguageContext = createContext(LanguageContextSetter.setLanguageContext);
+export const LanguageContext = createContext('ru');

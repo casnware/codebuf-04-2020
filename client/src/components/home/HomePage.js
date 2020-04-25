@@ -22,15 +22,28 @@ const HomePage = () => {
     'Eat In',
     'Common Questions'
   ];
-  var storeInfo = googleTranslate.translate(text, LanguageContext, function(err, translation) {
-                    console.log('Store Info',translation.translatedText);
-                  });	;
+  var storeInfo = 'Store Info';
   var pharmacy = 'Pharmacy';
   var home = 'Home';
   var eatIn = 'Eat In';
   var common = 'Common Questions';
 
-
+  storeInfo = await translate.translate(text, target);
+  googleTranslate.translate(storeInfo, LanguageContext, function(err, translation) {
+                     storeInfo = translation;
+                    });
+  googleTranslate.translate(pharmacy, LanguageContext, function(err, translation) {
+                       pharmacy = translation;
+                      });
+  googleTranslate.translate(home, LanguageContext, function(err, translation) {
+                       home = translation;
+                      });
+  googleTranslate.translate(eatIn, LanguageContext, function(err, translation) {
+                       eatIn = translation;
+                      });
+  googleTranslate.translate(common, LanguageContext, function(err, translation) {
+                         common = translation;
+                        });
   const openMenu = () => {
     toggleMenu(isOpen ? false : true);
   };
@@ -55,19 +68,19 @@ const HomePage = () => {
               </Link>
             </Menu.Item>
             <Menu.Item key="1">
-              <span className="nav-text">Store Info</span>
+              <span className="nav-text">'${storeInfo}'</span>
             </Menu.Item>
             <Menu.Item key="2">
-              <span className="nav-text">Pharmacy</span>
+              <span className="nav-text">{pharmacy}</span>
             </Menu.Item>
             <Menu.Item key="3">
-              <span className="nav-text">Home</span>
+              <span className="nav-text">{home}</span>
             </Menu.Item>
             <Menu.Item key="4">
-              <span className="nav-text">Eat In</span>
+              <span className="nav-text">{eatIn}</span>
             </Menu.Item>
             <Menu.Item key="5">
-              <span className="nav-text">Common Questions</span>
+              <span className="nav-text">{common}</span>
             </Menu.Item>
           </Menu>
         </Sider>
