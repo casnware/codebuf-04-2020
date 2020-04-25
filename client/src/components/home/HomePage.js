@@ -28,7 +28,7 @@ const HomePage = () => {
   var eatIn = 'Eat In';
   var common = 'Common Questions';
 
-  storeInfo = await translate.translate(text, target);
+ /* storeInfo = await translate.translate(text, target);
   googleTranslate.translate(storeInfo, LanguageContext, function(err, translation) {
                      storeInfo = translation;
                     });
@@ -46,7 +46,7 @@ const HomePage = () => {
                         });
   const openMenu = () => {
     toggleMenu(isOpen ? false : true);
-  };
+  };*/
 
   console.log(currentLanguage);
 
@@ -68,19 +68,19 @@ const HomePage = () => {
               </Link>
             </Menu.Item>
             <Menu.Item key="1">
-              <span className="nav-text">'${storeInfo}'</span>
+              <span className="nav-text">Store Info</span>
             </Menu.Item>
             <Menu.Item key="2">
-              <span className="nav-text">{pharmacy}</span>
+              <span className="nav-text">Pharmacy</span>
             </Menu.Item>
             <Menu.Item key="3">
-              <span className="nav-text">{home}</span>
+              <span className="nav-text">Home</span>
             </Menu.Item>
             <Menu.Item key="4">
-              <span className="nav-text">{eatIn}</span>
+              <span className="nav-text">Eat In</span>
             </Menu.Item>
             <Menu.Item key="5">
-              <span className="nav-text">{common}</span>
+              <span className="nav-text">Common Questions</span>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -93,36 +93,36 @@ const HomePage = () => {
             }}
           >
             <Collapse>
-              <Panel header="This is panel header 1" key="1">
+              <Panel header="Hello! What can we help you with today?" key="1">
                 <Collapse>
-                  <Panel header="This is panel header 1" key="1">
-                    <p>text</p>
+                  <Panel header="Did you find everything you are looking for today?" key="1">
+                    <p><button>Yes</button><button>No</button></p>
                   </Panel>
-                  <Panel header="This is panel header 2" key="2">
-                    <p>text</p>
+                  <Panel header="Would you like to return an item?" key="2">
+                    <p><button>Yes</button><button>No</button></p>
+                  </Panel>
+                  <Panel header="This is panel header 3" key="3">
+                    <p><button>Yes</button><button>No</button></p>
+                  </Panel>
+                </Collapse>
+              </Panel>
+              <Panel header="Where are the store departments?" key="2">
+                <Collapse>
+                  <Panel header="Where are the Frozen Isles?" key="1">
+                    <p>Back Left Corner</p>
+                  </Panel>
+                  <Panel header="Where is the Bakery?" key="2">
+                    <p>Front Right by the cash registers</p>
                   </Panel>
                   <Panel header="This is panel header 3" key="3">
                     <p>text</p>
                   </Panel>
                 </Collapse>
               </Panel>
-              <Panel header="This is panel header 2" key="2">
+              <Panel header="What's the purpose of this app?" key="3">
                 <Collapse>
-                  <Panel header="This is panel header 1" key="1">
-                    <p>text</p>
-                  </Panel>
-                  <Panel header="This is panel header 2" key="2">
-                    <p>text</p>
-                  </Panel>
-                  <Panel header="This is panel header 3" key="3">
-                    <p>text</p>
-                  </Panel>
-                </Collapse>
-              </Panel>
-              <Panel header="This is panel header 3" key="3">
-                <Collapse>
-                  <Panel header="This is panel header 1" key="1">
-                    <p>text</p>
+                  <Panel header="The Purpose" key="1">
+                    <p>Is to provide an enriched customer experience to the anyone who struggles to speak English. This app would have communication between customers on it and employees watching the server so it can flawlessly translate back and forth. Much faster than speaking into a phone and will give a buffer in the event of checking out which does become and issue when it is hard to return items you no longer want and/or are having a hard time understanding payment interactions. </p>
                   </Panel>
                   <Panel header="This is panel header 2" key="2">
                     <p>text</p>
