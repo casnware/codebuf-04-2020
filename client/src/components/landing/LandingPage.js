@@ -11,11 +11,11 @@ const LandingPage = () => {
   const languageList = [
     'English',
     'Russian',
-    'Ukranian',
     'Italian',
     'Spanish',
     'French',
     'German',
+    'Arabic'
   ];
   return (
     <div id="landingPageContainer">

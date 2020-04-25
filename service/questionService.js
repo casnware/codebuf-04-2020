@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 //var merchant = merchantService.addMerchant(req);
 
 const questionService = {
+
     addQuestion: (req) => {
         return models.question.create(req.body)
             .then((question) => {

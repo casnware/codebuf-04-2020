@@ -5,6 +5,8 @@ import { Layout, Menu, Collapse, Button } from 'antd';
 import { MenuOutlined, LeftOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
+const googleApi = process.env.GOOGLE_API_KEY;
+const googleTranslate = require('google-translate')(googleApi);
 const { Header, Footer, Sider, Content } = Layout;
 const { Panel } = Collapse;
 const { SubMenu } = Menu;
@@ -12,6 +14,21 @@ const { SubMenu } = Menu;
 const HomePage = () => {
   const { currentLanguage } = useContext(LanguageContext);
   const [isOpen, toggleMenu] = useState(false);
+  const questionGroupList = [
+    'Store Info',
+    'Pharmacy',
+    'Home',
+    'Eat In',
+    'Common Questions'
+  ];
+  var storeInfo = googleTranslate.translate(text, LanguageContext, function(err, translation) {
+                    console.log('Store Info',translation.translatedText);
+                  });	;
+  var pharmacy = 'Pharmacy';
+  var home = 'Home';
+  var eatIn = 'Eat In';
+  var common = 'Common Questions';
+
 
   const openMenu = () => {
     toggleMenu(isOpen ? false : true);
