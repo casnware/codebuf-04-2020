@@ -10,7 +10,7 @@ const Login = () => {
     <div id="loginContainer">
       <Layout>
         <Row justify="center" align="middle" style={{ height: '100vh' }}>
-          <Col span={20}>
+          <Col span={6}>
             <Content>
               <Form
                 name="normal_login"

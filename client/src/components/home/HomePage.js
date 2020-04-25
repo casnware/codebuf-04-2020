@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import './homePage.scss';
-import { LanguageContext } from '../../context/LanguageContext';
 import { Layout, Menu, Collapse, Button } from 'antd';
 import { MenuOutlined, LeftOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { LanguageContext } from '../../context/LanguageContext';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { Panel } = Collapse;
@@ -11,11 +11,7 @@ const { SubMenu } = Menu;
 
 const HomePage = () => {
   const { currentLanguage } = useContext(LanguageContext);
-  const [isOpen, toggleMenu] = useState(false);
-
-  const openMenu = () => {
-    toggleMenu(isOpen ? false : true);
-  };
+  console.log(currentLanguage);
   return (
     <div id="HomePageContainer">
       <Layout style={{ minHeight: '100vh' }}>
@@ -51,11 +47,6 @@ const HomePage = () => {
           </Menu>
         </Sider>
         <Layout>
-          {/* <Header style={{ backgroundColor: 'white' }} breakpoint="lg">
-            <Button style={{ border: 'none' }} onClick={openMenu}>
-              <MenuOutlined />
-            </Button>
-          </Header> */}
           <Content
             style={{
               margin: '24px 16px 0',
